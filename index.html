@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLEOS — 국내외 통합 마케팅 및 병의원 전문 올인원 파트너</title>
+  <meta name="description" content="국내외 통합 마케팅 그룹 클레오스(KLEOS). 뷰티·병의원 전문 브랜딩부터 글로벌 마케팅까지 올인원으로 지원합니다.">
+  <!-- Pretendard Variable (Korean premium sans-serif) -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <!-- Noto Serif KR (premium serif for display headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- GmarketSans (distinctive display) -->
+  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:   #FDFCFA;
+      --cream:   #F5EDE3;
+      --cream2:  #EDE2D6;
+      --dark:    #100E0C;
+      --dark2:   #1A1714;
+      --rose:    #C08472;
+      --rose-lt: #D4A090;
+      --rose-dk: #9E6B5A;
+      --rose-pale: rgba(192, 132, 114, 0.09);
+      --rose-bd:  rgba(192, 132, 114, 0.22);
+      --text:    #1C1714;
+      --text2:   #5A4E48;
+      --text3:   #9A8C84;
+      --r: 3px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 2px; }
+
+    a, button, select, [role="button"], .faq-question, .pkg-card, label[for] { cursor: pointer; }
+
+    /* ─ Font stack ─ */
+    :root {
+      --f-display: 'Noto Serif KR', Georgia, serif;
+      --f-heading: 'GmarketSans', 'Pretendard Variable', 'Pretendard', sans-serif;
+      --f-body:    'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+      --f-label:   'Montserrat', 'Pretendard Variable', sans-serif;
+    }
+
+    /* ─ Layout ─ */
+    .wrap  { max-width: 1180px; margin: 0 auto; padding: 0 44px; }
+    .wrap-sm { max-width: 860px; margin: 0 auto; padding: 0 44px; }
+    .sec  { padding: 100px 0; }
+
+    /* ─ Label ─ */
+    .eyebrow {
+      font-family: var(--f-label);
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 3.5px; text-transform: uppercase;
+      color: var(--rose); display: block; margin-bottom: 16px;
+    }
+    .rule { display: block; width: 40px; height: 1.5px; background: var(--rose); margin-bottom: 20px; }
+    .rule-c { display: block; width: 40px; height: 1.5px; background: var(--rose); margin: 0 auto 20px; }
+
+    /* ─ Headings ─ */
+    .h-display {
+      font-family: var(--f-display);
+      font-size: clamp(30px, 4vw, 50px);
+      font-weight: 300; line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+    .h1 {
+      font-family: var(--f-heading);
+      font-size: clamp(32px, 4.2vw, 56px);
+      font-weight: 700; line-height: 1.2;
+    }
+    .h2 {
+      font-family: var(--f-heading);
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 700; line-height: 1.25;
+    }
+    .h3 {
+      font-family: var(--f-heading);
+      font-size: 20px; font-weight: 700; line-height: 1.3;
+    }
+    .lead {
+      font-family: var(--f-body);
+      font-size: clamp(14px, 1.4vw, 16px);
+      color: var(--text2); line-height: 1.9;
+      font-weight: 400;
+    }
+
+    /* ─ Buttons (3D + inviting) ─ */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: var(--f-label);
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.8px;
+      padding: 15px 38px;
+      border: none; border-radius: var(--r);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s;
+      position: relative;
+      user-select: none;
+      white-space: nowrap;
+    }
+    /* Rose gold primary — very 3D */
+    .btn-rose {
+      color: #fff;
+      background: linear-gradient(175deg, #D49888 0%, #C08472 35%, #AE7262 70%, #9A6050 100%);
+      border-top: 1px solid rgba(255,255,255,0.35);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.30),
+        inset 0 -1px 0 rgba(0,0,0,0.18),
+        0 5px 0 #7A4838,
+        0 6px 18px rgba(192,132,114,.45),
+        0 2px 6px rgba(0,0,0,.20);
+      text-shadow: 0 1px 2px rgba(0,0,0,.25);
+    }
+    .btn-rose:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.30),
+        inset 0 -1px 0 rgba(0,0,0,0.18),
+        0 7px 0 #7A4838,
+        0 9px 24px rgba(192,132,114,.55),
+        0 3px 8px rgba(0,0,0,.22);
+    }
+    .btn-rose:active {
+      transform: translateY(4px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.20),
+        0 1px 0 #7A4838,
+        0 2px 8px rgba(192,132,114,.3);
+    }
+    /* Dark outline */
+    .btn-dark {
+      color: var(--dark);
+      background: var(--white);
+      border: 1.5px solid rgba(28,23,20,0.28);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.9),
+        0 4px 0 rgba(28,23,20,0.12),
+        0 5px 14px rgba(28,23,20,.10);
+    }
+    .btn-dark:hover {
+      transform: translateY(-2px);
+      border-color: var(--rose);
+      color: var(--rose);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.9),
+        0 6px 0 rgba(192,132,114,0.2),
+        0 7px 18px rgba(192,132,114,.2);
+    }
+    .btn-dark:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(28,23,20,0.1); }
+    /* Outline on dark bg */
+    .btn-outline-light {
+      color: #fff;
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.38);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 4px 0 rgba(0,0,0,0.22),
+        0 5px 14px rgba(0,0,0,.20);
+    }
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.6);
+      transform: translateY(-2px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.15),
+        0 6px 0 rgba(0,0,0,0.22),
+        0 8px 20px rgba(0,0,0,.25);
+    }
+    .btn-outline-light:active { transform: translateY(3px); }
+    .btn-lg { font-size: 14px; padding: 17px 48px; }
+    .btn-sm { font-size: 12px; padding: 12px 28px; }
+    /* KakaoTalk yellow 3D button */
+    .btn-kakao {
+      color: #3A1D1D;
+      background: linear-gradient(175deg, #FFE942 0%, #FEE500 35%, #F0D800 70%, #DDCA00 100%);
+      border-top: 1px solid rgba(255,255,255,0.50);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.45),
+        inset 0 -1px 0 rgba(0,0,0,0.12),
+        0 5px 0 #B8A000,
+        0 6px 18px rgba(254,229,0,.55),
+        0 2px 6px rgba(0,0,0,.18);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+      font-weight: 700;
+    }
+    .btn-kakao:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.45),
+        inset 0 -1px 0 rgba(0,0,0,0.12),
+        0 7px 0 #B8A000,
+        0 9px 24px rgba(254,229,0,.65),
+        0 3px 8px rgba(0,0,0,.20);
+    }
+    .btn-kakao:active {
+      transform: translateY(4px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        0 1px 0 #B8A000,
+        0 2px 8px rgba(254,229,0,.3);
+    }
+    /* Floating KakaoTalk button */
+    .kakao-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 900;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+    }
+    .kakao-float-btn {
+      display: flex; align-items: center; gap: 10px;
+      padding: 13px 22px;
+      background: linear-gradient(175deg, #FFE942 0%, #FEE500 40%, #F0D800 75%, #DDCA00 100%);
+      border: none; border-top: 1px solid rgba(255,255,255,0.5);
+      border-radius: 50px;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.45),
+        0 5px 0 #B8A000,
+        0 6px 20px rgba(254,229,0,.60),
+        0 3px 10px rgba(0,0,0,.22);
+      cursor: pointer;
+      text-decoration: none;
+      font-family: var(--f-label);
+      font-size: 12px; font-weight: 700;
+      color: #3A1D1D;
+      letter-spacing: .3px;
+      transition: transform .15s, box-shadow .15s, filter .15s;
+      white-space: nowrap;
+    }
+    .kakao-float-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.45),
+        0 7px 0 #B8A000,
+        0 9px 26px rgba(254,229,0,.70),
+        0 4px 12px rgba(0,0,0,.24);
+    }
+    .kakao-float-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #B8A000, 0 2px 8px rgba(254,229,0,.3); }
+    .kakao-float-icon {
+      width: 22px; height: 22px; flex-shrink: 0;
+    }
+
+    /* ─ NAV ─ */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 22px 0;
+      transition: background .35s, padding .35s, box-shadow .35s;
+    }
+    #nav.scrolled {
+      background: rgba(253,252,250,.96);
+      backdrop-filter: blur(14px);
+      padding: 14px 0;
+      box-shadow: 0 1px 0 var(--rose-bd), 0 4px 20px rgba(28,23,20,.06);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 30px; transition: opacity .2s; }
+    #nav:not(.scrolled) .nav-logo img { filter: invert(1) brightness(2); }
+    .nav-logo:hover img { opacity: .8; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-family: var(--f-label);
+      font-size: 12px; font-weight: 500; letter-spacing: .5px;
+      text-decoration: none;
+      color: rgba(255,255,255,.75);
+      transition: color .2s;
+      padding-bottom: 3px;
+      position: relative;
+    }
+    #nav.scrolled .nav-links a { color: var(--text2); }
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 100%;
+      height: 1.5px; background: var(--rose);
+      transition: right .25s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { right: 0; }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--rose) !important; }
+
+    /* ─ HERO ─ */
+    #hero {
+      min-height: 100vh;
+      background: var(--dark);
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 140px 0 100px;
+    }
+    .hero-noise {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 60% 35%, rgba(192,132,114,.11) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 50% at 15% 75%, rgba(192,132,114,.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-deco {
+      position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+      width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(192,132,114,.06) 0%, transparent 70%);
+      border: 1px solid rgba(192,132,114,.08);
+      pointer-events: none;
+    }
+    .hero-deco2 {
+      position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
+      width: 320px; height: 320px; border-radius: 50%;
+      border: 1px solid rgba(192,132,114,.05);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 780px; }
+    .hero-sub-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--f-label);
+      font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--rose-lt);
+      margin-bottom: 32px;
+    }
+    .hero-sub-tag::before {
+      content: ''; display: block; width: 28px; height: 1px; background: var(--rose);
+    }
+    .hero-h { color: #fff; margin-bottom: 14px; font-weight: 300; }
+    .hero-typed-line {
+      font-family: var(--f-heading);
+      font-size: clamp(28px, 3.8vw, 52px);
+      font-weight: 700;
+      color: var(--rose-lt);
+      line-height: 1.2;
+      min-height: 1.2em;
+      display: flex; align-items: center; gap: 0;
+      margin-bottom: 36px;
+    }
+    .typed-text { border-right: 2.5px solid var(--rose); padding-right: 4px; animation: blink .75s step-end infinite; }
+    @keyframes blink { 0%,100%{border-color:var(--rose)} 50%{border-color:transparent} }
+    .hero-body { font-size: 16px; color: rgba(255,255,255,.6); line-height: 1.85; font-weight: 300; max-width: 520px; margin-bottom: 48px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-scroll {
+      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,.3);
+      font-family: var(--f-label); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+      animation: sb 2.2s ease-in-out infinite;
+    }
+    .hero-scroll-line { width: 1px; height: 44px; background: linear-gradient(to bottom, var(--rose), transparent); }
+    @keyframes sb { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(7px)} }
+
+    /* ─ TICKER ─ */
+    .ticker {
+      overflow: hidden;
+      background: var(--rose);
+      padding: 13px 0;
+    }
+    .ticker-track { display: flex; white-space: nowrap; animation: tick 28s linear infinite; }
+    .ticker-item {
+      font-family: var(--f-label); font-size: 10px; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: rgba(255,255,255,.85); padding: 0 28px;
+    }
+    .ticker-item b { color: #fff; margin-right: 28px; }
+    @keyframes tick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ─ INTRO ─ */
+    #intro { background: var(--white); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .intro-visual {
+      position: relative;
+      height: 420px;
+    }
+    .intro-bg-block {
+      position: absolute; inset: 0;
+      background: var(--cream);
+      border: 1px solid var(--rose-bd);
+    }
+    .intro-card {
+      position: absolute; bottom: -28px; right: -28px;
+      background: var(--dark);
+      padding: 28px 32px;
+      width: 220px;
+    }
+    .intro-card-num {
+      font-family: var(--f-heading);
+      font-size: 52px; font-weight: 700; color: var(--rose-lt);
+      line-height: 1;
+    }
+    .intro-card-label { font-size: 12px; color: rgba(255,255,255,.55); margin-top: 6px; font-weight: 300; }
+    .intro-badge {
+      position: absolute; top: -20px; left: -20px;
+      background: var(--rose);
+      color: #fff;
+      font-family: var(--f-label);
+      font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      padding: 8px 16px;
+    }
+    .intro-inner-text {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 40px;
+    }
+    .intro-inner-text .big {
+      font-family: var(--f-display);
+      font-size: 80px; font-weight: 300;
+      color: rgba(192,132,114,.15);
+      line-height: 1;
+    }
+    .intro-inner-text .small {
+      font-family: var(--f-label);
+      font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--rose);
+    }
+    .intro-tag { font-family: var(--f-display); font-size: 17px; font-style: italic; color: var(--rose); margin-bottom: 8px; }
+    .intro-copy h2 { margin-bottom: 24px; }
+    .intro-copy p { margin-bottom: 18px; }
+    .intro-copy p:last-of-type { margin-bottom: 36px; }
+
+    /* ─ SERVICES ─ */
+    #services { background: var(--cream); }
+    .svc-header { text-align: center; margin-bottom: 64px; }
+    .svc-header h2 { margin-bottom: 18px; }
+    .svc-header p { max-width: 560px; margin: 0 auto; }
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .svc-card {
+      background: var(--white);
+      padding: 44px 36px;
+      border-top: 3px solid transparent;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      position: relative;
+    }
+    .svc-card:hover {
+      border-top-color: var(--rose);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(28,23,20,.10);
+    }
+    .svc-card-num {
+      font-family: var(--f-display);
+      font-size: 60px; font-weight: 300;
+      color: rgba(192,132,114,.12);
+      line-height: 1;
+      position: absolute; top: 20px; right: 28px;
+    }
+    .svc-icon {
+      width: 48px; height: 48px; margin-bottom: 24px;
+      background: var(--rose-pale);
+      border: 1px solid var(--rose-bd);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--rose);
+      flex-shrink: 0;
+    }
+    .svc-tag { font-family:var(--f-label); font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--rose); margin-bottom:10px; }
+    .svc-card h3 { margin-bottom: 14px; }
+    .svc-card p { font-size: 14px; color: var(--text2); line-height: 1.78; font-weight: 300; margin-bottom: 20px; }
+    .svc-list { list-style: none; border-top: 1px solid var(--rose-bd); padding-top: 20px; }
+    .svc-list li {
+      font-size: 13px; color: var(--text2); padding: 7px 0;
+      border-bottom: 1px solid rgba(28,23,20,.05);
+      font-weight: 300; display: flex; align-items: baseline; gap: 8px;
+    }
+    .svc-list li::before { content: '—'; color: var(--rose); flex-shrink: 0; font-size: 11px; }
+
+    /* ─ WHY ─ */
+    #why { background: var(--cream); }
+    .why-header { margin-bottom: 64px; }
+    .why-header .eyebrow { color: var(--rose); }
+    .why-header h2 { color: var(--text); margin-bottom: 18px; }
+    .why-header p { color: var(--text2); max-width: 600px; font-weight: 400; font-size: 15px; line-height: 1.85; }
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .why-card {
+      background: var(--white);
+      padding: 44px 40px;
+      border: 1px solid var(--rose-bd);
+      border-top: 3px solid transparent;
+      transition: border-top-color .25s, transform .25s, box-shadow .25s;
+      position: relative; overflow: hidden;
+    }
+    .why-card:hover {
+      border-top-color: var(--rose);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(192,132,114,.12);
+    }
+    .why-num {
+      font-family: var(--f-heading);
+      font-size: 42px; font-weight: 700;
+      color: rgba(192,132,114,.14);
+      line-height: 1; margin-bottom: 20px;
+    }
+    .why-card h3 { color: var(--text); font-size: 18px; margin-bottom: 12px; }
+    .why-card p { font-size: 14px; color: var(--text2); line-height: 1.8; font-weight: 400; }
+
+    /* ─ TARGET / INDUSTRY CARDS ─ */
+    #target { background: var(--cream); }
+    .industry-header { text-align: center; margin-bottom: 60px; }
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .industry-card {
+      background: var(--white);
+      border: 1px solid var(--rose-bd);
+      border-top: 3px solid var(--rose);
+      padding: 40px 32px;
+      position: relative;
+      transition: transform .3s ease, box-shadow .3s ease;
+      box-shadow: 0 4px 24px rgba(28,23,20,.06);
+      display: flex; flex-direction: column;
+    }
+    .industry-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 52px rgba(192,132,114,.18);
+    }
+    .industry-card--featured {
+      background: linear-gradient(160deg, var(--rose) 0%, var(--rose-dk) 100%);
+      border-top-color: rgba(255,255,255,.35);
+      border-color: transparent;
+      box-shadow: 0 8px 32px rgba(192,132,114,.38);
+    }
+    .industry-card--featured:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 56px rgba(192,132,114,.48);
+    }
+    .industry-icon {
+      font-size: 26px; margin-bottom: 16px; line-height: 1;
+    }
+    .industry-tag {
+      font-family: var(--f-label); font-size: 9px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 8px;
+    }
+    .industry-card--featured .industry-tag { color: rgba(255,255,255,.7); }
+    .industry-title {
+      font-family: var(--f-heading); font-size: 21px; font-weight: 700;
+      color: var(--text); margin-bottom: 10px; line-height: 1.2;
+    }
+    .industry-card--featured .industry-title { color: #fff; }
+    .industry-desc {
+      font-size: 13px; color: var(--text2); line-height: 1.75;
+      margin-bottom: 20px; font-weight: 300;
+    }
+    .industry-card--featured .industry-desc { color: rgba(255,255,255,.82); }
+    .industry-list {
+      list-style: none; padding: 0; margin: 0 0 28px;
+      display: flex; flex-direction: column; gap: 10px; flex: 1;
+    }
+    .industry-list li {
+      font-size: 13px; color: var(--text2);
+      padding-left: 18px; position: relative; line-height: 1.6;
+    }
+    .industry-list li::before {
+      content: '—'; position: absolute; left: 0;
+      color: var(--rose); font-size: 11px; top: 2px;
+    }
+    .industry-card--featured .industry-list li { color: rgba(255,255,255,.88); }
+    .industry-card--featured .industry-list li::before { color: rgba(255,255,255,.55); }
+    .industry-cta {
+      display: block; text-align: center; text-decoration: none;
+      padding: 13px 20px; font-size: 13px;
+    }
+    .industry-card--featured .btn-rose {
+      background: rgba(255,255,255,.18);
+      border: 1.5px solid rgba(255,255,255,.45);
+      box-shadow: none;
+      color: #fff;
+    }
+    .industry-card--featured .btn-rose:hover {
+      background: rgba(255,255,255,.28);
+    }
+
+    /* ─ MANIFESTO ─ */
+    #manifesto {
+      background: linear-gradient(135deg, #C08472 0%, #B07060 40%, #9E6050 100%);
+      padding: 110px 0;
+      text-align: center;
+    }
+    .manifesto-en {
+      font-family: var(--f-label);
+      font-size: clamp(11px, 1.4vw, 14px);
+      font-style: italic; font-weight: 500;
+      color: rgba(255,255,255,.7);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .manifesto-kr {
+      font-family: var(--f-display);
+      font-size: clamp(26px, 4vw, 52px);
+      font-weight: 600; line-height: 1.4;
+      color: #fff;
+      margin-bottom: 44px;
+    }
+    .manifesto-kr em { font-style: italic; color: rgba(255,255,255,.85); }
+    .manifesto-sub { font-size: 15px; color: rgba(255,255,255,.7); font-weight: 400; margin-bottom: 48px; }
+
+    /* ─ CONTACT ─ */
+    #contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
+    .contact-info h2 { margin-bottom: 20px; }
+    .contact-info > p { font-size: 15px; color: var(--text2); line-height: 1.85; font-weight: 300; margin-bottom: 40px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 14px; }
+
+    /* 3-D contact info cards */
+    .ci-card {
+      display: block; text-decoration: none; color: var(--text);
+      background: var(--white);
+      border: 1px solid var(--rose-bd);
+      border-radius: 8px;
+      box-shadow: 0 4px 0 var(--rose-dk), 0 6px 22px rgba(192,132,114,.18), inset 0 1px 0 rgba(255,255,255,.9);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .ci-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 0 var(--rose-dk), 0 14px 32px rgba(192,132,114,.28), inset 0 1px 0 rgba(255,255,255,.9);
+    }
+    .ci-card:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 var(--rose-dk), 0 2px 10px rgba(192,132,114,.12);
+    }
+    .ci-card--kakao {
+      border-color: rgba(254,229,0,.5);
+      box-shadow: 0 4px 0 #B8A000, 0 6px 22px rgba(254,229,0,.22), inset 0 1px 0 rgba(255,255,255,.9);
+    }
+    .ci-card--kakao:hover {
+      box-shadow: 0 7px 0 #B8A000, 0 14px 32px rgba(254,229,0,.32), inset 0 1px 0 rgba(255,255,255,.9);
+    }
+    .ci-card--kakao:active {
+      box-shadow: 0 1px 0 #B8A000, 0 2px 10px rgba(254,229,0,.12);
+    }
+    .ci-card-inner { display: flex; align-items: center; gap: 16px; padding: 18px 20px; }
+    .ci-icon-wrap {
+      width: 46px; height: 46px; flex-shrink: 0; border-radius: 50%;
+      background: linear-gradient(160deg, var(--rose-lt) 0%, var(--rose) 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(192,132,114,.4);
+    }
+    .ci-icon-wrap--kakao {
+      background: linear-gradient(160deg, #FFE942 0%, #FEE500 100%);
+      box-shadow: 0 3px 10px rgba(254,229,0,.45);
+    }
+    .ci-text { flex: 1; min-width: 0; }
+    .ci-label {
+      font-family: var(--f-label); font-size: 9px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 3px;
+    }
+    .ci-card--kakao .ci-label { color: #96820A; }
+    .ci-value { font-size: 14px; font-weight: 500; color: var(--text); }
+    .ci-arrow {
+      font-size: 16px; color: var(--rose); flex-shrink: 0;
+      opacity: 0; transform: translateX(-6px);
+      transition: opacity .2s, transform .2s;
+    }
+    .ci-card:hover .ci-arrow { opacity: 1; transform: translateX(0); }
+    .contact-card {
+      background: var(--white);
+      padding: 52px 48px;
+      border-top: 3px solid var(--rose);
+      box-shadow: 0 8px 48px rgba(28,23,20,.08);
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; }
+    .form-full { grid-column: 1/-1; }
+    .form-label {
+      font-family: var(--f-label);
+      font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--rose);
+    }
+    .form-label .opt { color: var(--text3); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 11px; margin-left: 4px; }
+    .form-req { color: #B84040; margin-left: 2px; }
+    .f-input, .f-select, .f-textarea {
+      background: var(--white);
+      border: 1.5px solid rgba(28,23,20,.12);
+      border-radius: var(--r);
+      color: var(--text);
+      font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+      padding: 13px 15px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      width: 100%;
+    }
+    .f-input:focus, .f-select:focus, .f-textarea:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 3px rgba(192,132,114,.12);
+    }
+    .f-input::placeholder, .f-textarea::placeholder { color: var(--text3); }
+    .f-select {
+      cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C08472' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 13px center; padding-right: 34px;
+      background-color: var(--white);
+    }
+    .f-select option { background: #fff; color: var(--text); }
+    .f-textarea { resize: vertical; min-height: 96px; }
+    .privacy-row { display: flex; align-items: flex-start; gap: 12px; margin-top: 4px; }
+    .prv-chk {
+      width: 18px; height: 18px; flex-shrink: 0;
+      border: 1.5px solid var(--rose-bd);
+      border-radius: 2px; appearance: none; cursor: pointer; margin-top: 2px;
+      background: var(--white); position: relative; transition: background .18s, border-color .18s;
+    }
+    .prv-chk:checked { background: var(--rose); border-color: var(--rose); }
+    .prv-chk:checked::after {
+      content: '✓'; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); color: #fff; font-size: 10px; font-weight: 700;
+    }
+    .prv-text { font-size: 13px; color: var(--text2); line-height: 1.65; font-weight: 300; }
+    .prv-text a { color: var(--rose); text-decoration: underline; text-decoration-style: dotted; cursor: pointer; }
+    .prv-text a:hover { color: var(--rose-dk); }
+    .form-submit { width: 100%; margin-top: 20px; font-size: 14px; padding: 16px 0; }
+
+    /* ─ FOOTER ─ */
+    footer {
+      background: var(--dark);
+      padding: 64px 0 32px;
+      border-top: 1px solid rgba(192,132,114,.12);
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 60px; margin-bottom: 52px; }
+    .footer-brand img { height: 26px; filter: invert(1); margin-bottom: 20px; }
+    .footer-brand p { font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.75; font-weight: 300; max-width: 280px; }
+    .footer-col h5 {
+      font-family:var(--f-label); font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase;
+      color: var(--rose); margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 13px; color: rgba(255,255,255,.35); text-decoration: none; font-weight: 300; transition: color .2s; cursor: pointer; }
+    .footer-col a:hover { color: var(--rose-lt); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-bottom p { font-size: 11px; color: rgba(255,255,255,.25); font-weight: 300; }
+    .footer-email a { font-size: 11px; color: var(--rose); text-decoration: none; }
+
+    /* ─ Modal ─ */
+    .modal-wrap {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,.7); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-wrap.open { display: flex; }
+    .modal-box {
+      background: var(--white); max-width: 520px; width: 100%;
+      max-height: 80vh; overflow-y: auto;
+      padding: 48px; border-top: 3px solid var(--rose);
+      position: relative;
+    }
+    .modal-close { position:absolute;top:14px;right:14px; background:none;border:none; color:var(--text3);font-size:20px;cursor:pointer;transition:color.2s; }
+    .modal-close:hover { color:var(--text); }
+    .modal-box h3 { font-family:var(--f-heading); font-size:20px; margin-bottom:20px; }
+    .modal-box p, .modal-box li { font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:12px;font-weight:300; }
+    .modal-box li { margin-left:18px; }
+
+    /* ─ Toast ─ */
+    .toast {
+      position: fixed; bottom: 28px; right: 28px; z-index: 3000;
+      background: var(--dark);
+      border-left: 3px solid var(--rose);
+      padding: 16px 22px;
+      font-size: 13px; color: #fff;
+      opacity: 0; transform: translateY(8px);
+      transition: all .3s ease; pointer-events: none;
+      max-width: 360px;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* ─ Reveal animations ─ */
+    [data-reveal] {
+      opacity: 0; transition: opacity .7s ease, transform .7s ease;
+    }
+    [data-reveal="up"]    { transform: translateY(36px); }
+    [data-reveal="left"]  { transform: translateX(-32px); }
+    [data-reveal="right"] { transform: translateX(32px); }
+    [data-reveal="scale"] { transform: scale(.96); }
+    [data-reveal].revealed { opacity: 1; transform: none; }
+    [data-delay="1"] { transition-delay: .1s; }
+    [data-delay="2"] { transition-delay: .2s; }
+    [data-delay="3"] { transition-delay: .3s; }
+    [data-delay="4"] { transition-delay: .4s; }
+    [data-delay="5"] { transition-delay: .5s; }
+
+    /* ─ Responsive ─ */
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .intro-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .industry-grid { grid-template-columns: 1fr; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .intro-visual { height: 280px; }
+    }
+    @media (max-width: 900px) {
+      .industry-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 0 22px; } .wrap-sm { padding: 0 22px; } .sec { padding: 72px 0; }
+      .hero-btns { flex-direction: column; }
+      .contact-card { padding: 32px 24px; }
+      .industry-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV ─────────────────────────── -->
+<nav id="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><img src="LOGO.png" alt="KLEOS 클레오스"></a>
+      <ul class="nav-links">
+        <li><a href="#intro">소개</a></li>
+        <li><a href="#services">서비스</a></li>
+        <li><a href="#why">Why Kleos</a></li>
+        <li><a href="#target">추천 대상</a></li>
+        <li><a href="#contact">상담 신청</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-rose btn-sm">무료 상담</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO ────────────────────────── -->
+<section id="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-deco"></div>
+  <div class="hero-deco2"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-sub-tag">Integrated Marketing Group</div>
+      <h1 class="h-display hero-h">한국의 아름다움을,<br>세계로 연결합니다</h1>
+      <div class="hero-typed-line">
+        <span class="typed-text" id="typed"></span>
+      </div>
+      <p class="hero-body">
+        고객의 비즈니스를 국내를 넘어 세계로 연결하는<br>
+        통합 마케팅 그룹 클레오스(KLEOS)입니다.<br>
+        단순한 홍보를 넘어, 브랜드의 가치를 높이는<br>
+        독보적인 전략을 수행합니다.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-rose btn-lg">지금 무료 상담 신청 →</a>
+        <a href="http://pf.kakao.com/_DaLxlX" target="_blank" rel="noopener" class="btn btn-kakao btn-lg">
+          <svg class="kakao-float-icon" viewBox="0 0 24 24" fill="#3A1D1D" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.676 1.534 5.035 3.868 6.48L4.75 21l4.29-2.43C10.28 18.84 11.12 19 12 19c5.523 0 10-3.477 10-8S17.523 3 12 3z"/></svg>
+          카카오톡 문의
+        </a>
+        <a href="#services" class="btn btn-outline-light btn-lg">서비스 알아보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- TICKER ──────────────────────── -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><b>✦</b>뷰티 · 미용</span>
+    <span class="ticker-item"><b>✦</b>병원 · 의원 · 약국</span>
+    <span class="ticker-item"><b>✦</b>K-Beauty 글로벌</span>
+    <span class="ticker-item"><b>✦</b>숏폼 영상 제작</span>
+    <span class="ticker-item"><b>✦</b>인플루언서 마케팅</span>
+    <span class="ticker-item"><b>✦</b>의료법 준수 마케팅</span>
+    <span class="ticker-item"><b>✦</b>SNS 통합 운영</span>
+    <span class="ticker-item"><b>✦</b>다국어 CS 대행</span>
+    <span class="ticker-item"><b>✦</b>10년 실무 전문성</span>
+    <span class="ticker-item"><b>✦</b>Trust Korean Beauty</span>
+    <!-- duplicate -->
+    <span class="ticker-item"><b>✦</b>뷰티 · 미용</span>
+    <span class="ticker-item"><b>✦</b>병원 · 의원 · 약국</span>
+    <span class="ticker-item"><b>✦</b>K-Beauty 글로벌</span>
+    <span class="ticker-item"><b>✦</b>숏폼 영상 제작</span>
+    <span class="ticker-item"><b>✦</b>인플루언서 마케팅</span>
+    <span class="ticker-item"><b>✦</b>의료법 준수 마케팅</span>
+    <span class="ticker-item"><b>✦</b>SNS 통합 운영</span>
+    <span class="ticker-item"><b>✦</b>다국어 CS 대행</span>
+    <span class="ticker-item"><b>✦</b>10년 실무 전문성</span>
+    <span class="ticker-item"><b>✦</b>Trust Korean Beauty</span>
+  </div>
+</div>
+
+<!-- INTRO ───────────────────────── -->
+<section id="intro" class="sec">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div class="intro-copy" data-reveal="left">
+        <span class="eyebrow">About KLEOS</span>
+        <div class="rule"></div>
+        <div class="intro-tag">숫자가 증명하는 신뢰</div>
+        <h2 class="h2" style="margin-bottom:24px;">브랜드의 가치를<br>높이는 파트너</h2>
+        <p class="lead">
+          한국의 뷰티, 엔터테인먼트, 병의원과 긴밀하게 협력하며
+          단순한 홍보를 넘어 <strong>브랜드의 가치를 높이는 독보적인 브랜딩</strong>을 수행합니다.
+        </p>
+        <p class="lead">
+          매일 쏟아지는 광고 속에서 고객의 시선을 멈추게 하는 것은 결국
+          콘텐츠의 힘입니다. 클레오스만의 감각으로 귀원의 격을 높여드립니다.
+        </p>
+        <a href="#contact" class="btn btn-rose" style="margin-top:8px;">파트너십 문의하기 →</a>
+      </div>
+      <div class="intro-visual" data-reveal="right">
+        <div class="intro-bg-block"></div>
+        <div class="intro-inner-text">
+          <div style="font-family:var(--f-display);font-size:clamp(80px,10vw,140px);font-weight:300;color:rgba(192,132,114,.13);line-height:1;letter-spacing:-4px;">K</div>
+          <div style="font-family:var(--f-label);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--rose);margin-top:8px;">Kleos Marketing Group</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES ────────────────────── -->
+<section id="services" class="sec">
+  <div class="wrap">
+    <div class="svc-header" data-reveal="up">
+      <span class="eyebrow">Our Services</span>
+      <div class="rule-c"></div>
+      <h2 class="h2" style="margin-bottom:16px;">클레오스 올인원 서비스</h2>
+      <p class="lead">병원 운영에 필요한 모든 마케팅 요소를 한 곳에서.<br>실무 전문가가 처음부터 끝까지 직접 책임집니다.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card" data-reveal="up" data-delay="1">
+        <div class="svc-card-num">01</div>
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <div class="svc-tag">Total Branding</div>
+        <h3>병의원 특화<br>토탈 브랜딩 마케팅</h3>
+        <p>단순 광고 집행이 아닌 병원 운영에 필요한 모든 마케팅 요소를 올인원으로 지원합니다.</p>
+        <ul class="svc-list">
+          <li>인스타그램·페이스북·구글·X·스레드 전 채널 운영</li>
+          <li>숏폼(릴스·쇼츠·틱톡) 기획·촬영 제작</li>
+          <li>브랜드 이미지 맞춤 인플루언서 매칭 캠페인</li>
+          <li>CRM 고객 관리 지원 및 마케팅 전략 수립</li>
+        </ul>
+      </div>
+      <div class="svc-card" data-reveal="up" data-delay="2">
+        <div class="svc-card-num">02</div>
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+          </svg>
+        </div>
+        <div class="svc-tag">Global Marketing</div>
+        <h3>글로벌 특화<br>브랜딩 · 네트워크 확장</h3>
+        <p>글로벌 시장 진출이 막막하신 대표님들을 위해 세계 시장으로 뻗어나갈 수 있는 가이드가 되어드립니다.</p>
+        <ul class="svc-list">
+          <li>글로벌 온라인 CS 및 다국어 소통 지원</li>
+          <li>국가별 타겟팅 최적화 광고 실행</li>
+          <li>K-뷰티 · K-의료 글로벌 마케팅 전문 수행</li>
+          <li>해외 인플루언서 섭외 및 협업 콘텐츠</li>
+        </ul>
+      </div>
+      <div class="svc-card" data-reveal="up" data-delay="3">
+        <div class="svc-card-num">03</div>
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="svc-tag">Compliant Marketing</div>
+        <h3>의료법 준수<br>안전한 마케팅</h3>
+        <p>클레오스는 전문 변호사의 법률 자문을 통해 의료법 가이드를 엄격히 준수합니다.</p>
+        <ul class="svc-list">
+          <li>의료광고 심의 기준 사전 검토·콘텐츠 리뷰</li>
+          <li>과장 광고 지양, 신뢰할 수 있는 마케팅 지향</li>
+          <li>비포-애프터 콘텐츠 법적 리스크 사전 점검</li>
+          <li>각 직역별 광고 규정 완전 준수</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ─────────────────────────── -->
+<section id="why" class="sec">
+  <div class="wrap">
+    <div class="why-header" data-reveal="up">
+      <span class="eyebrow">Why Kleos</span>
+      <div class="rule"></div>
+      <h2 class="h2" style="margin-bottom:20px;">실력의 가치가 숫자로 증명되는 순간,<br>클레오스가 함께합니다</h2>
+      <p>의료진의 전문성은 마케팅을 만날 때 비로소 강력한 브랜드가 됩니다. 클레오스는 10년 동안 축적된 업계 특화 데이터를 통해, 막연한 홍보가 아닌 지속 가능한 성장의 길을 제시합니다. 귀사의 실력이 시장에서 정당한 평가를 받을 수 있도록 최적화된 솔루션을 제공합니다.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal="left" data-delay="1">
+        <div class="why-num">01</div>
+        <h3>실무 전문성 10년</h3>
+        <p>의료 및 뷰티 업계에서 10년 동안 쌓아온 실전 데이터를 기반으로 합니다. 단순히 보여주기식이 아닌, 실제 성과와 브랜딩 강화로 증명되는 마케팅을 실천합니다.</p>
+      </div>
+      <div class="why-card" data-reveal="right" data-delay="1">
+        <div class="why-num">02</div>
+        <h3>트렌드를 앞서가는 콘텐츠</h3>
+        <p>매일 쏟아지는 광고 속에서 고객의 시선을 멈추게 하는 것은 콘텐츠의 힘입니다. 클레오스만의 독보적인 감각으로 귀원의 격을 한 단계 높여드립니다.</p>
+      </div>
+      <div class="why-card" data-reveal="left" data-delay="2">
+        <div class="why-num">03</div>
+        <h3>기획·촬영·편집, 전부 클레오스가 합니다</h3>
+        <p>콘텐츠 제작의 모든 과정을 클레오스가 전담합니다. 귀하는 귀하의 전문 업무에만 집중하시면 됩니다. 별도 PD나 에디터를 고용하실 필요가 없습니다.</p>
+      </div>
+      <div class="why-card" data-reveal="right" data-delay="2">
+        <div class="why-num">04</div>
+        <h3>국내 + 해외, 처음부터 함께 설계</h3>
+        <p>국내와 해외 마케팅을 별도 에이전시에 맡길 필요가 없습니다. 한 팀이 통합 관리하기 때문에 브랜드 톤이 일관되고, 전략이 시너지를 냅니다.</p>
+      </div>
+      <div class="why-card" data-reveal="left" data-delay="3" style="grid-column:1/-1; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+        <div>
+          <div class="why-num">05</div>
+          <h3>계약 종료 후에도 자산은 귀하의 것</h3>
+          <p>협업 기간 동안 구축된 모든 채널·콘텐츠·데이터는 100% 귀하 소유입니다. 계약 종료 시 완전 인계를 보장하며, 어떠한 상황에서도 귀하의 자산을 보호합니다.</p>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:var(--f-display); font-size:clamp(32px,4vw,52px); font-weight:300; color:rgba(192,132,114,.18); line-height:1.15;">클레오스와<br>파트너사의<br>성장은<br>하나입니다</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET ──────────────────────── -->
+<section id="target" class="sec">
+  <div class="wrap">
+    <div class="industry-header" data-reveal="up">
+      <span class="eyebrow">Who We Serve</span>
+      <div class="rule-c"></div>
+      <h2 class="h2">이런 대표님들께<br>클레오스를 추천합니다</h2>
+    </div>
+    <div class="industry-grid">
+
+      <!-- 뷰티 -->
+      <div class="industry-card" data-reveal="up" data-delay="1">
+        <div class="industry-icon">✦</div>
+        <div class="industry-tag">Beauty</div>
+        <h3 class="industry-title">뷰티 브랜드</h3>
+        <p class="industry-desc">K-뷰티의 경쟁력을 국내외 시장에서 동시에 극대화합니다. 브랜드 스토리를 콘텐츠로 전환해 소비자와 감성적으로 연결합니다.</p>
+        <ul class="industry-list">
+          <li>SNS 숏폼(릴스·쇼츠) 기획·촬영·편집 원스톱</li>
+          <li>일본·대만·동남아 현지화 마케팅 전략</li>
+          <li>인플루언서 협업 및 바이럴 캠페인 설계</li>
+          <li>제품 스토리텔링 브랜딩 영상 제작</li>
+          <li>글로벌 플랫폼(TikTok·Instagram·YouTube) 통합 운영</li>
+        </ul>
+        <a href="#contact" class="btn btn-rose industry-cta">뷰티 무료 상담 →</a>
+      </div>
+
+      <!-- 전문직 (Featured) -->
+      <div class="industry-card industry-card--featured" data-reveal="up" data-delay="2">
+        <div class="industry-icon">⚖</div>
+        <div class="industry-tag">Professional</div>
+        <h3 class="industry-title">전문직 퍼스널 브랜딩</h3>
+        <p class="industry-desc">노무사·회계사·변호사의 전문성을 시장에서 신뢰받는 브랜드로 전환합니다. 지식 콘텐츠로 잠재 고객을 자연스럽게 유입합니다.</p>
+        <ul class="industry-list">
+          <li>전문가 퍼스널 브랜딩 전략 설계 및 실행</li>
+          <li>유튜브·블로그·인스타그램 채널 통합 운영</li>
+          <li>법적·윤리적 기준 준수 마케팅 콘텐츠</li>
+          <li>전문 지식 기반 신뢰도 제고 콘텐츠 제작</li>
+          <li>상담 문의 전환율을 높이는 CTA 최적화</li>
+        </ul>
+        <a href="#contact" class="btn btn-rose industry-cta">전문직 무료 상담 →</a>
+      </div>
+
+      <!-- 병의원+약사 -->
+      <div class="industry-card" data-reveal="up" data-delay="3">
+        <div class="industry-icon">✚</div>
+        <div class="industry-tag">Medical · Pharmacy</div>
+        <h3 class="industry-title">병의원 · 약국</h3>
+        <p class="industry-desc">의료광고 심의 기준을 완벽히 준수하면서 환자 신뢰와 내원을 동시에 늘리는 통합 마케팅을 제공합니다.</p>
+        <ul class="industry-list">
+          <li>의료법·약사법 준수 안심 광고 제작</li>
+          <li>네이버 플레이스·블로그·검색광고 최적화</li>
+          <li>원장·전문의 퍼스널 브랜딩 콘텐츠</li>
+          <li>외국인 환자 유치 글로벌 마케팅 전략</li>
+          <li>리뷰·후기 관리 및 온라인 평판 강화</li>
+        </ul>
+        <a href="#contact" class="btn btn-rose industry-cta">의료 무료 상담 →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO ───────────────────── -->
+<section id="manifesto">
+  <div class="wrap-sm" style="text-align:center;">
+    <div data-reveal="up">
+      <p class="manifesto-en">Trust Korean Beauty with KLEOS, Wherever You Are.</p>
+      <h2 class="manifesto-kr">세계 어디서도, 클레오스와 함께.<br><em>한국의 아름다움을 신뢰하세요.</em></h2>
+      <p class="manifesto-sub">Trust Korean Beauty with KLEOS, Wherever You Are.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-rose btn-lg">지금 시작하기 →</a>
+        <a href="http://pf.kakao.com/_DaLxlX" target="_blank" rel="noopener" class="btn btn-kakao btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#3A1D1D"><path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.676 1.534 5.035 3.868 6.48L4.75 21l4.29-2.43C10.28 18.84 11.12 19 12 19c5.523 0 10-3.477 10-8S17.523 3 12 3z"/></svg>
+          카카오톡 문의
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT ─────────────────────── -->
+<section id="contact" class="sec">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div data-reveal="left">
+        <span class="eyebrow">Free Consultation</span>
+        <div class="rule"></div>
+        <h2 class="h2" style="margin-bottom:20px;">상담 신청</h2>
+        <p style="font-size:15px;color:var(--text2);line-height:1.85;font-weight:300;">무료 상담을 통해 현재 상황을 분석하고 가장 적합한 마케팅 플랜을 제안드립니다. 부담 없이 문의해 주세요.</p>
+        <div class="contact-detail" style="margin-top:36px;">
+
+          <!-- 대표번호 3D Card -->
+          <a href="tel:0507-1320-2085" class="ci-card">
+            <div class="ci-card-inner">
+              <div class="ci-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <div class="ci-text">
+                <div class="ci-label">대표번호</div>
+                <div class="ci-value">0507-1320-2085</div>
+              </div>
+              <div class="ci-arrow">→</div>
+            </div>
+          </a>
+
+          <!-- Email 3D Card -->
+          <a href="mailto:kleoskorea@gmail.com" class="ci-card">
+            <div class="ci-card-inner">
+              <div class="ci-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="ci-text">
+                <div class="ci-label">Email</div>
+                <div class="ci-value">kleoskorea@gmail.com</div>
+              </div>
+              <div class="ci-arrow">→</div>
+            </div>
+          </a>
+
+          <!-- KakaoTalk 3D Card -->
+          <a href="http://pf.kakao.com/_DaLxlX" target="_blank" rel="noopener" class="ci-card ci-card--kakao">
+            <div class="ci-card-inner">
+              <div class="ci-icon-wrap ci-icon-wrap--kakao">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#3A1D1D">
+                  <path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.676 1.534 5.035 3.868 6.48L4.75 21l4.29-2.43C10.28 18.84 11.12 19 12 19c5.523 0 10-3.477 10-8S17.523 3 12 3z"/>
+                </svg>
+              </div>
+              <div class="ci-text">
+                <div class="ci-label">카카오톡 채널</div>
+                <div class="ci-value">바로 문의하기 →</div>
+              </div>
+              <div class="ci-arrow" style="color:#96820A;">→</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="contact-card" data-reveal="right">
+        <form id="cForm" onsubmit="handleSubmit(event)" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="f-name">성함<span class="form-req">*</span></label>
+              <input class="f-input" type="text" id="f-name" name="name" placeholder="홍길동" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-phone">연락처<span class="form-req">*</span></label>
+              <input class="f-input" type="tel" id="f-phone" name="phone" placeholder="010-0000-0000" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">이메일<span class="form-req">*</span></label>
+              <input class="f-input" type="email" id="f-email" name="email" placeholder="example@email.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-company">회사명<span class="form-req">*</span></label>
+              <input class="f-input" type="text" id="f-company" name="company" placeholder="병원명 또는 상호명" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-region">지역<span class="form-req">*</span></label>
+              <input class="f-input" type="text" id="f-region" name="region" placeholder="서울 강남구" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-mktg">희망 마케팅<span class="form-req">*</span></label>
+              <select class="f-select" id="f-mktg" name="marketing" required>
+                <option value="" disabled selected>선택해 주세요</option>
+                <option>국내 마케팅</option>
+                <option>해외 마케팅</option>
+                <option>국내 + 해외 마케팅</option>
+              </select>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="f-country">희망 국가<span class="opt">(선택 — 해외 마케팅 희망 시)</span></label>
+              <input class="f-input" type="text" id="f-country" name="country" placeholder="예: 일본, 대만, 미국 등">
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="f-msg">문의사항<span class="opt">(선택사항)</span></label>
+              <textarea class="f-textarea" id="f-msg" name="message" placeholder="현재 상황이나 궁금한 점을 자유롭게 입력해 주세요."></textarea>
+            </div>
+            <div class="form-group form-full">
+              <div class="privacy-row">
+                <input class="prv-chk" type="checkbox" id="f-prv" required>
+                <label class="prv-text" for="f-prv">
+                  개인정보 수집·이용에 동의합니다.
+                  <a onclick="openPrivacy(event)">자세히 보기</a>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-rose form-submit">상담 신청하기 →</button>
+          <div style="text-align:center;margin-top:14px;">
+            <span style="font-size:12px;color:var(--text3);font-family:var(--f-label);">또는</span>
+          </div>
+          <a href="http://pf.kakao.com/_DaLxlX" target="_blank" rel="noopener" class="btn btn-kakao form-submit" style="margin-top:0;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#3A1D1D"><path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.676 1.534 5.035 3.868 6.48L4.75 21l4.29-2.43C10.28 18.84 11.12 19 12 19c5.523 0 10-3.477 10-8S17.523 3 12 3z"/></svg>
+            카카오톡으로 바로 문의하기
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER ──────────────────────── -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid" style="grid-template-columns:1.8fr 1fr;">
+      <div class="footer-brand">
+        <img src="LOGO.png" alt="KLEOS">
+        <p>국내외 통합 마케팅 및 병의원 전문 올인원 파트너 클레오스.<br>세계 어디서도, 클레오스와 함께. 한국의 아름다움을 신뢰하세요.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a>0507-1320-2085</a></li>
+          <li><a>kleoskorea@gmail.com</a></li>
+          <li><a href="http://pf.kakao.com/_DaLxlX" target="_blank" rel="noopener">카카오톡 채널 문의</a></li>
+          <li><a href="#contact">무료 상담 신청</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 KLEOS (클레오스). All rights reserved.</p>
+      <div><a href="mailto:kleoskorea@gmail.com" class="footer-email" style="color:var(--rose);font-size:11px;text-decoration:none;">kleoskorea@gmail.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING KAKAO ─────────────── -->
+<div class="kakao-float">
+  <a href="http://pf.kakao.com/_DaLxlX" target="_blank" rel="noopener" class="kakao-float-btn" title="카카오톡으로 문의하기">
+    <svg class="kakao-float-icon" viewBox="0 0 24 24" fill="#3A1D1D" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 3C6.477 3 2 6.477 2 10.8c0 2.676 1.534 5.035 3.868 6.48L4.75 21l4.29-2.43C10.28 18.84 11.12 19 12 19c5.523 0 10-3.477 10-8S17.523 3 12 3z"/>
+    </svg>
+    카카오톡 상담
+  </a>
+</div>
+
+<!-- PRIVACY MODAL ───────────────── -->
+<div class="modal-wrap" id="privacyModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closePrivacy()">✕</button>
+    <h3>개인정보 수집·이용 동의</h3>
+    <p><strong style="color:var(--rose)">수집 항목</strong><br>성함, 연락처, 이메일, 회사명, 지역, 희망 마케팅, 희망 국가, 문의사항</p>
+    <p><strong style="color:var(--rose)">수집·이용 목적</strong><br>마케팅 상담 및 서비스 제안, 문의 응대, 상담 일정 안내</p>
+    <p><strong style="color:var(--rose)">보유 및 이용 기간</strong><br>상담 완료 후 1년간 보관 후 파기. 단, 관련 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.</p>
+    <p><strong style="color:var(--rose)">제3자 제공</strong><br>수집된 개인정보는 귀하의 동의 없이 제3자에게 제공되지 않습니다.</p>
+    <p>위 개인정보 수집·이용에 동의하지 않을 권리가 있으나, 동의를 거부하실 경우 상담 신청이 제한될 수 있습니다.</p>
+    <button class="btn btn-rose" style="width:100%;margin-top:4px;" onclick="closePrivacy()">확인</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">✓ 상담 신청이 접수되었습니다. 빠르게 연락드리겠습니다.</div>
+
+<script>
+/* ── Typing animation — 한 번만 타이핑 후 정지 ── */
+(function typeOnce() {
+  const phrase = 'All-in-One 마케팅';
+  const el = document.getElementById('typed');
+  let i = 0;
+  function tick() {
+    el.textContent = phrase.slice(0, ++i);
+    if (i < phrase.length) setTimeout(tick, 90);
+    else el.style.borderRight = '2.5px solid transparent'; // 커서 깜빡임 중지
+  }
+  setTimeout(tick, 600); // 페이지 로드 후 짧은 지연
+})();
+
+/* ── Nav scroll + active ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* Nav active section highlight */
+const sections = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+const secObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navAs.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+sections.forEach(s => secObs.observe(s));
+
+/* ── Smooth anchor ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+/* ── Reveal on scroll ── */
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('[data-reveal]').forEach(el => revObs.observe(el));
+
+/* ── Privacy ── */
+function openPrivacy(e) { e.preventDefault(); document.getElementById('privacyModal').classList.add('open'); }
+function closePrivacy() { document.getElementById('privacyModal').classList.remove('open'); }
+document.getElementById('privacyModal').addEventListener('click', function(e) { if (e.target === this) closePrivacy(); });
+
+/* ── Form — Formspree 이메일 전송 ── */
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('[type="submit"]');
+  const origText = btn.textContent;
+
+  btn.textContent = '전송 중...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('https://formspree.io/f/xlgadgoz', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 5500);
+      form.reset();
+    } else {
+      const data = await res.json().catch(() => ({}));
+      const msg = data.errors ? data.errors.map(e => e.message).join(', ') : '전송 오류가 발생했습니다.';
+      alert(msg + '\n직접 이메일로 연락해 주세요: kleoskorea@gmail.com');
+    }
+  } catch (_) {
+    alert('네트워크 오류가 발생했습니다.\n잠시 후 다시 시도하거나 카카오톡으로 문의해 주세요.');
+  } finally {
+    btn.textContent = origText;
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
