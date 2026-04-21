@@ -530,7 +530,27 @@
     }
     .serve-card--featured .serve-list li { color: rgba(255,255,255,.65); }
     .serve-card--featured .serve-list li::before { background: var(--rose-lt); }
-    .serve-cta { font-size: 12px; padding: 14px 28px; align-self: flex-start; }
+    .serve-cta {
+      font-size: 12px;
+      padding: 14px 28px;
+      align-self: flex-start;
+      box-shadow: 0 6px 20px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .serve-cta:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(0,0,0,.18), 0 4px 10px rgba(0,0,0,.1);
+    }
+    .serve-cta:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 10px rgba(0,0,0,.12);
+    }
+    .serve-card--featured .btn-rose.serve-cta {
+      box-shadow: 0 6px 24px rgba(192,120,96,.5), 0 2px 8px rgba(192,120,96,.3);
+    }
+    .serve-card--featured .btn-rose.serve-cta:hover {
+      box-shadow: 0 14px 40px rgba(192,120,96,.6), 0 4px 12px rgba(192,120,96,.35);
+    }
     @media (max-width: 900px) {
       .serve-grid { grid-template-columns: 1fr; }
       .serve-card--featured { transform: none; }
@@ -1253,7 +1273,7 @@
           <li>인플루언서 협업 운영</li>
           <li>글로벌 플랫폼 통합 운영</li>
         </ul>
-        <a href="#contact" class="btn btn--outline serve-cta">뷰티 무료 상담 →</a>
+        <a href="#contact" class="btn btn-outline serve-cta">뷰티 무료 상담 →</a>
       </div>
 
       <!-- Card 2: Professional (featured) -->
@@ -1268,7 +1288,7 @@
           <li>전문 지식 기반 콘텐츠</li>
           <li>CTA 최적화</li>
         </ul>
-        <a href="#contact" class="btn btn--primary serve-cta">전문직 무료 상담 →</a>
+        <a href="#contact" class="btn btn-rose serve-cta">전문직 무료 상담 →</a>
       </div>
 
       <!-- Card 3: Medical -->
@@ -1282,7 +1302,7 @@
           <li>외국인 환자 유치</li>
           <li>리뷰·후기 관리</li>
         </ul>
-        <a href="#contact" class="btn btn--outline serve-cta">의료 무료 상담 →</a>
+        <a href="#contact" class="btn btn-outline serve-cta">의료 무료 상담 →</a>
       </div>
 
     </div>
